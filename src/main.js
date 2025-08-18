@@ -1,8 +1,8 @@
 import './style.css'
-import './js/index'
 import { setupShowGameSection } from './js/showGameSection.js';
 import { getRandomWord } from './js/showWords';
 import { hyphenWord } from './js/showWordSyllables.js';
+
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -16,6 +16,7 @@ document.querySelector('#app').innerHTML = `
     <section id="game">
     <p>Select the syllable with the stress</p>
     <div id="syllables-container"></div>
+    <p id="result"></p>
     </section>
   </div>
 `

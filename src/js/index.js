@@ -1,8 +1,6 @@
 import { dictionary } from 'cmu-pronouncing-dictionary';
 import hyphen from 'hyphen/en/index.js';
 
-
-
 /**
  * Convierte una transcripción fonética en sílabas con stress
  * @param {string} phonemes - string de fonemas CMUdict, ej: "F OW1 T AH0 G R AE2 F"
@@ -72,10 +70,10 @@ function checkStress(word, userIndex) {
 // -------------------------
 // Ejemplos
 // -------------------------
-/* console.log(syllabify('photograph'));
+console.log(syllabify('evoke'));
 // → { word: 'photograph', syllables: [...], markedWord: 'PHO-to-graph', stressedIndex: 1 }
 
-console.log(syllabify('photography'));
+console.log(syllabify('outhomer'));
 // → { word: 'photography', syllables: [...], markedWord: 'pho-TOG-ra-phy', stressedIndex: 2 }
 
 console.log(checkStress('photograph', 1));
@@ -83,13 +81,3 @@ console.log(checkStress('photograph', 1));
 
 console.log(checkStress('photograph', 2));
 // → incorrecto ❌
-
-(async () => {
-  const word = "photography";
-
-  const result = await hyphen.hyphenate(word, {
-    hyphenChar: "-"
-  });
-  console.log(result); // → "pho­to­graph"
-})();
- */
