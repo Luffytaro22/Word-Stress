@@ -9,7 +9,7 @@ export async function getRandomWord() {
     }
     const word = await response.json();
     wordPlaceholder.textContent = word;
-    gameSection.appendChild(wordPlaceholder);
+    gameSection.insertBefore(wordPlaceholder, gameSection.firstChild);
   } catch (error) {
     console.error('Error obtaining the word: ', error);
   }
