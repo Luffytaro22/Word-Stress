@@ -1,7 +1,7 @@
 import './style.css'
 import './js/index'
 import { setupShowGameSection } from './js/showGameSection.js';
-import { showWords } from './js/showWords';
+import { getRandomWord } from './js/showWords';
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -13,10 +13,11 @@ document.querySelector('#app').innerHTML = `
     </button>
     </section>
     <section id="game">
-
+    <p>Select the syllable with the stress</p>
+    
     </section>
   </div>
 `
 
 setupShowGameSection();
-showWords();
+getRandomWord();

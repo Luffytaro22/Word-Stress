@@ -1,12 +1,16 @@
-import { dictionary } from 'cmu-pronouncing-dictionary';
-export function showWords(){
-  const min = 100;
-  const max = 100000;
-  const randomNumber = Math.random() * (max - min) + min;
+export async function getRandomWord() {
   const wordPlaceholder = document.createElement('p');
+  wordPlaceholder.id = "word";
   const gameSection = document.getElementById("game");
-
-  wordPlaceholder.textContent = Object.keys(dictionary).at(randomNumber);
-
-  gameSection.appendChild(wordPlaceholder);
+  try {
+    const response = await fetch('https://random-word-api.herokuapp.com/word');
+    if (!response.ok) {
+      throw new Error('Error in the API response');
+    }
+    const word = await response.json();
+    wordPlaceholder.textContent = word;
+    gameSection.appendChild(wordPlaceholder);
+  } catch (error) {
+    console.error('Error obtaining the word: ', error);
+  }
 }
