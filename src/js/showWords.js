@@ -1,8 +1,12 @@
 import { dictionary } from 'cmu-pronouncing-dictionary';
-const randomNumber = Math.random() * 1000;
-const wordPlaceholder = document.createElement('p');
-const gameSection = document.getElementById("game");
+export function showWords(){
+  const min = 100;
+  const max = 100000;
+  const randomNumber = Math.random() * (max - min) + min;
+  const wordPlaceholder = document.createElement('p');
+  const gameSection = document.getElementById("game");
 
-wordPlaceholder.textContent = Object.keys(dictionary).at(randomNumber);
+  wordPlaceholder.textContent = Object.keys(dictionary).at(randomNumber);
 
-gameSection.appendChild(wordPlaceholder);
+  gameSection.appendChild(wordPlaceholder);
+}

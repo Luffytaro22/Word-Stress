@@ -1,5 +1,7 @@
 import './style.css'
-import { setupCounter } from './counter.js'
+import './js/index'
+import { setupShowGameSection } from './js/showGameSection.js';
+import { showWords } from './js/showWords';
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -16,4 +18,5 @@ document.querySelector('#app').innerHTML = `
   </div>
 `
 
-setupCounter(document.querySelector('#counter'))
+setupShowGameSection();
+showWords();

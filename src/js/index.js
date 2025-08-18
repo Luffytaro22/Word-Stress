@@ -72,7 +72,7 @@ function checkStress(word, userIndex) {
 // -------------------------
 // Ejemplos
 // -------------------------
-console.log(syllabify('photograph'));
+/* console.log(syllabify('photograph'));
 // → { word: 'photograph', syllables: [...], markedWord: 'PHO-to-graph', stressedIndex: 1 }
 
 console.log(syllabify('photography'));
@@ -92,4 +92,4 @@ console.log(checkStress('photograph', 2));
   });
   console.log(result); // → "pho­to­graph"
 })();
-
+ */
