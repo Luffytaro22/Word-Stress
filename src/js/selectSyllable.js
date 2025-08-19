@@ -8,8 +8,8 @@ export function checkStress(wordObject, userIndex) {
     const container = document.getElementById("syllables-container");
     for(let i = 0; i < container.children.length; i++){
       const child = container.children[i];
-      if(i === (result.stressedIndex)){
-        resultContainer.textContent = `Incorrect!\nThe syllable is "${child.textContent}"`;
+      if(i === (wordObject.stressedIndex)){
+        resultContainer.textContent = `Incorrect! The syllable is "${child.textContent}"`;
       }
     }
   }
