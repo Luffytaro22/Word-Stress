@@ -17,4 +17,5 @@ export function checkStress(wordObject, userIndex) {
   }
   document.getElementById("overlay").style.display = "block";
   resultElement.parentElement.style.display = "flex";
+  resultElement.parentElement.classList.add("scale-in-hor-center");
 }
