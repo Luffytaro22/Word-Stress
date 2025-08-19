@@ -2,7 +2,7 @@ import './style.css'
 import { setupShowGameSection } from './js/showGameSection.js';
 import { getRandomWord } from './js/showWords';
 import { hyphenWord } from './js/showWordSyllables.js';
-
+export let selectedWord; //Global word to select
 
 document.querySelector('#app').innerHTML = `
   <div>

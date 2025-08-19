@@ -1,16 +1,15 @@
+import wordsData from "../../words.json";
+import { selectedWord } from "../main";
+
 export async function getRandomWord() {
   const wordPlaceholder = document.createElement('p');
   wordPlaceholder.id = "word";
   const gameSection = document.getElementById("game");
-  try {
-    const response = await fetch('https://random-word-api.herokuapp.com/word');
-    if (!response.ok) {
-      throw new Error('Error in the API response');
-    }
-    const word = await response.json();
-    wordPlaceholder.textContent = word;
-    gameSection.insertBefore(wordPlaceholder, gameSection.firstChild);
-  } catch (error) {
-    console.error('Error obtaining the word: ', error);
-  }
+  //Select a random index.
+  const index = Math.random() * 300;
+  //Select a random word
+  const word = wordsData.words[index].word;
+  selectedWord = wordsData.words[index];
+  wordPlaceholder.textContent = word;
+  gameSection.insertBefore(wordPlaceholder, gameSection.firstChild);
 }
