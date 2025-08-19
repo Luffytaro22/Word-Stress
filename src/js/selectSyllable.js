@@ -15,5 +15,6 @@ export function checkStress(wordObject, userIndex) {
       }
     }
   }
+  document.getElementById("overlay").style.display = "block";
   resultElement.parentElement.style.display = "flex";
 }

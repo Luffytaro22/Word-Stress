@@ -6,6 +6,7 @@ export let selectedWord; //Global word to select
 
 document.querySelector('#app').innerHTML = `
   <div>
+    <div id="overlay"></div>
     <section id="gretting">
     <h1>WELCOME TO THE WORD-STRESS GAME!</h1>
     <h2>PRESS START!</h2>
