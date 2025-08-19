@@ -1,5 +1,6 @@
 import hyphen from 'hyphen/en/index.js';
 import { checkStress } from './selectSyllable';
+import { selectedWord } from '../main';
 
 export async function hyphenWord(word) {
   //Hyphen the word
@@ -13,7 +14,7 @@ export async function hyphenWord(word) {
     const syllablePlaceholder = document.createElement("button");
     syllablePlaceholder.className = "syllable";
     syllablePlaceholder.textContent = wordHyphen[i];
-    syllablePlaceholder.addEventListener('click', () => checkStress(word, i + 1));
+    syllablePlaceholder.addEventListener('click', () => checkStress(selectedWord, i));
     const container = document.getElementById("syllables-container");
     container.appendChild(syllablePlaceholder);
   }
