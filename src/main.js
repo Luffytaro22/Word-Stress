@@ -51,4 +51,5 @@ h1.addEventListener('animationend', () => {
 
 h2.addEventListener('animationend', () => {
   startBn.classList.remove("hide");
+  startBn.classList.add("bounce-in-bottom");
 });
