@@ -3,6 +3,7 @@ import { setupShowGameSection } from './js/showGameSection.js';
 import { getRandomWord } from './js/showWords';
 import { hyphenWord } from './js/showWordSyllables.js';
 import { pressContinueButton } from './js/continueButton.js';
+import { pressRestartButton } from './js/restartButton.js';
 export let selectedWord; //Global word to select
 
 document.querySelector('#app').innerHTML = `
@@ -36,3 +37,4 @@ setupShowGameSection();
 await getRandomWord();
 hyphenWord(document.getElementById("word").textContent);
 pressContinueButton();
+pressRestartButton();
