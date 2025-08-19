@@ -1,17 +1,19 @@
 export function checkStress(wordObject, userIndex) {
-  const resultContainer = document.getElementById("result");
+  const resultElement = document.getElementById("result");
 
   //Show a message depending if the syllable is correct or not.
   if(wordObject.stressedIndex === userIndex){
-    resultContainer.textContent = "Correct!";
+    resultElement.textContent = "Correct!";
+    resultElement.parentElement.style.backgroundColor = "rgba(13, 138, 6)";
   }else{
     const container = document.getElementById("syllables-container");
     for(let i = 0; i < container.children.length; i++){
       const child = container.children[i];
       if(i === (wordObject.stressedIndex)){
-        resultContainer.textContent = `Incorrect! The syllable is "${child.textContent}"`;
+        resultElement.textContent = `Incorrect! The syllable is "${child.textContent}"`;
+        resultElement.parentElement.style.backgroundColor = "rgba(126, 0, 0)";
       }
     }
   }
-  
+  resultElement.parentElement.style.display = "flex";
 }

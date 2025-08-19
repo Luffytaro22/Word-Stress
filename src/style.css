@@ -50,3 +50,15 @@
   padding: 10px 20px;
   border-radius: 20px;
 }
+
+#result-container {
+  display: none;
+  flex-direction: column;
+  z-index: 1;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  padding: 40px 80px;
+  gap: 1em;
+  width: 400px;
+}
