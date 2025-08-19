@@ -2,8 +2,7 @@ import wordsData from "../../words.json";
 import { setSelectedWord } from "../main";
 
 export async function getRandomWord() {
-  const wordPlaceholder = document.createElement('p');
-  wordPlaceholder.id = "word";
+  const wordPlaceholder = document.getElementById("word");
   const gameSection = document.getElementById("game");
   //Select a random index.
   const index = Math.floor(Math.random() * wordsData.words.length);

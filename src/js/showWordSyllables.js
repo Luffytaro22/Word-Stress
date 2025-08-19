@@ -9,13 +9,15 @@ export async function hyphenWord(word) {
   });
   //Obtain each syllable
   const wordHyphen = result.split("-");
-  //Insert each syllable in the p items.
+  const container = document.getElementById("syllables-container");
+  container.innerHTML = '';
+  //Insert each syllable in the button items.
   for(let i = 0; i < wordHyphen.length; i++){
+    
     const syllablePlaceholder = document.createElement("button");
     syllablePlaceholder.className = "syllable";
     syllablePlaceholder.textContent = wordHyphen[i];
     syllablePlaceholder.addEventListener('click', () => checkStress(selectedWord, i));
-    const container = document.getElementById("syllables-container");
     container.appendChild(syllablePlaceholder);
   }
 };

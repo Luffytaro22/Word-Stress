@@ -2,6 +2,7 @@ import './style.css'
 import { setupShowGameSection } from './js/showGameSection.js';
 import { getRandomWord } from './js/showWords';
 import { hyphenWord } from './js/showWordSyllables.js';
+import { pressContinueButton } from './js/continueButton.js';
 export let selectedWord; //Global word to select
 
 document.querySelector('#app').innerHTML = `
@@ -15,6 +16,7 @@ document.querySelector('#app').innerHTML = `
     </button>
     </section>
     <section id="game">
+    <p id="word"></p>
     <p>Select the syllable with the stress</p>
     <div id="syllables-container"></div>
     <div id="result-container">
@@ -32,3 +34,4 @@ export function setSelectedWord(word){
 setupShowGameSection();
 await getRandomWord();
 hyphenWord(document.getElementById("word").textContent);
+pressContinueButton();
