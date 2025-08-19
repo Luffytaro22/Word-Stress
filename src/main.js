@@ -21,6 +21,10 @@ document.querySelector('#app').innerHTML = `
   </div>
 `
 
+export function setSelectedWord(word){
+  selectedWord = word;
+}
+
 setupShowGameSection();
 await getRandomWord();
 hyphenWord(document.getElementById("word").textContent);
