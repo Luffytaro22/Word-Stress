@@ -85,3 +85,13 @@
   z-index: 998; /* por encima de todo */
 }
 
+#restart {
+  align-self: end;
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  background-color: rgba(3, 3, 3, 0.6);
+  border-radius: 0 10px 0 10px;
+  padding: 5px 15px;
+  font-size: 0.9em;
+}

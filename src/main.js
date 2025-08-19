@@ -16,6 +16,7 @@ document.querySelector('#app').innerHTML = `
     </button>
     </section>
     <section id="game">
+    <button id="restart">Restart</button>
     <p id="word"></p>
     <p>Select the syllable with the stress</p>
     <div id="syllables-container"></div>
