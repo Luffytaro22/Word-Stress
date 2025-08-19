@@ -9,6 +9,50 @@
   border: none;
 }
 
+.hide {
+  display: none;
+}
+
+h1, h2 {
+  overflow: hidden;
+  visibility: hidden;
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  
+}
+
+h1 {
+  animation: 
+    typing-h1 3.5s steps(60, end) forwards,
+    blink-caret .75s step-end infinite;
+}
+
+/* h2 {
+  animation: typing-h2 2s steps(12, end) 3.5s, 
+             blink-caret .75s step-end infinite 3.5s;
+} */
+
+/* The typing effect */
+/* typing h1 */
+@keyframes typing-h1 {
+  from { width: 0; visibility: visible; }
+  to   { width: 86%; visibility: visible; }
+}
+
+/* typing h2 */
+@keyframes typing-h2 {
+  from { width: 0; visibility: visible; }
+  to   { width: 32%; visibility: visible; }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: black; }
+}
+
 #game {
   display: none;
 }
