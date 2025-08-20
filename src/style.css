@@ -216,13 +216,13 @@ h1 {
 }
 
 .scale-in-hor-center {
-	-webkit-animation: scale-in-hor-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: scale-in-hor-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	-webkit-animation: scale-in-hor-center 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-hor-center 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 .scale-out-horizontal {
-	-webkit-animation: scale-out-horizontal 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-	        animation: scale-out-horizontal 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	-webkit-animation: scale-out-horizontal 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: scale-out-horizontal 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 
 /* The typing effect */
@@ -268,6 +268,7 @@ h1 {
   font-size: 0.7em;
   padding: 10px 20px;
   border-radius: 10px;
+  transition: background-color 1s ease 0s;
 }
 
 #game {
@@ -290,9 +291,9 @@ h1 {
   transition: background-color 1s ease 0s;
 }
 
-.syllable:hover {
+.syllable:hover, #start-button:hover, #restart:hover, #continue-bn:hover {
   background-color: rgba(255, 255, 255, 1);
-  color: rgb(10, 26, 75);
+  color: rgb(10, 26, 75) !important;
 }
 
 #result-container {
@@ -326,6 +327,7 @@ h1 {
   background-color: rgba(6, 1, 8, 0.5);
   border-radius: 10px;
   padding: 5px 15px;
+  transition: background-color 1s ease 0s;
 }
 
 #overlay {
@@ -347,4 +349,5 @@ h1 {
   border-radius: 0 10px 0 10px;
   padding: 5px 15px;
   font-size: 0.9em;
+  transition: background-color 1s ease 0s;
 }

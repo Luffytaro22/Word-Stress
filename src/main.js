@@ -12,12 +12,10 @@ document.querySelector('#app').innerHTML = `
     <section id="gretting">
     <h1 class="typewriter">WELCOME TO THE WORD-STRESS GAME!</h1>
     <h2>PRESS START!</h2>
-    <button id="start-button" class="hide">
-      <p>START</p>
-    </button>
+    <button id="start-button" class="hide">START</button>
     </section>
     <section id="game">
-    <button id="restart">Restart</button>
+    <button id="restart">RESTART</button>
     <p id="word"></p>
     <p>Select the syllable with the stress</p>
     <div id="syllables-container"></div>
