@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "cmu-pronouncing-dictionary": "^3.0.0",
-    "hyphen": "^1.10.6"
+    "compromise": "^14.14.4",
+    "compromise-speech": "^0.1.1"
   }
 }

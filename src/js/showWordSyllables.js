@@ -1,22 +1,22 @@
-import hyphen from 'hyphen/en/index.js';
+import nlp from 'compromise';
+import plg from 'compromise-speech'
 import { checkStress } from './selectSyllable';
 import { selectedWord } from '../main';
+nlp.extend(plg)
 
 export async function hyphenWord(word) {
   //Hyphen the word
-  const result = await hyphen.hyphenate(word, {
-    hyphenChar: "-"
-  });
+  const result = await nlp(word);
   //Obtain each syllable
-  const wordHyphen = result.split("-");
+  const wordSyllables = result.syllables()[0];
   const container = document.getElementById("syllables-container");
   container.innerHTML = '';
   //Insert each syllable in the button items.
-  for(let i = 0; i < wordHyphen.length; i++){
+  for(let i = 0; i < wordSyllables.length; i++){
     
     const syllablePlaceholder = document.createElement("button");
     syllablePlaceholder.className = "syllable";
-    syllablePlaceholder.textContent = wordHyphen[i];
+    syllablePlaceholder.textContent = wordSyllables[i];
     syllablePlaceholder.addEventListener('click', () => checkStress(selectedWord, i));
     container.appendChild(syllablePlaceholder);
   }
