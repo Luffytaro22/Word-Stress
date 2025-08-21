@@ -179,12 +179,14 @@
 
 * {
   font-family: "Google Sans Code", Arial;
-  font-size: 1.2em;
+  font-size: 1em;
   color: white;
   margin: 0;
   padding: 0;
   border: none;
 }
+
+
 
 button:hover {
   cursor: pointer;
@@ -198,10 +200,9 @@ h1, h2 {
   overflow: hidden;
   visibility: hidden;
   border-right: .15em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
+  white-space: normal; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em; /* Adjust as needed */
-  
 }
 
 h1 {
@@ -281,6 +282,8 @@ h1 {
 #syllables-container {
   display: flex;
   gap: 2em;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .syllable {
@@ -304,11 +307,11 @@ h1 {
   z-index: 999;
   position: absolute;
   top: 30%;
-  left: 28%;
+  left: 15%;
   padding: 20px 40px;
   gap: 1em;
   width: 50%;
-  max-width: 500px;
+  max-width: 200px;
   font-size: 0.9em;
 }
 
@@ -351,3 +354,26 @@ h1 {
   font-size: 0.9em;
   transition: background-color 1s ease 0s;
 }
+
+@media (min-width: 768px){
+  * {
+    font-size: 1.1em;
+  }
+
+  #result-container {
+    left: 33%;
+  }
+}
+
+@media (min-width: 1024px) {
+  * {
+    font-size: 1.2em;
+  }
+
+  #result-container {
+    left: 28%;
+    max-width: 500px;
+  }
+}
+
+

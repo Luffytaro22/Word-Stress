@@ -17,7 +17,7 @@ document.querySelector('#app').innerHTML = `
     <section id="game">
     <button id="restart">RESTART</button>
     <p id="word"></p>
-    <p>Select the syllable with the stress</p>
+    <p style="text-align: center;">Select the syllable with the stress</p>
     <div id="syllables-container"></div>
     <div id="result-container">
     <p id="result"></p>
